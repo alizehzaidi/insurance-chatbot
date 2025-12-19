@@ -28,7 +28,7 @@ An intelligent conversational AI chatbot for collecting insurance information wi
 
 ### 1. Clone the Repository
 ```bash
-cd coverix_chatbot
+cd insurance_chatbot
 ```
 
 ### 2. Create Virtual Environment
@@ -209,29 +209,15 @@ sqlite3 survey_data.db "SELECT * FROM sessions WHERE status = 'completed';"
 
 ## Troubleshooting
 
-### "OPENAI_API_KEY not found" Error
-- Ensure `.env` file exists in project root
-- Check that the file contains: `OPENAI_API_KEY=sk-proj-...`
-- Restart the application after creating `.env`
-
-### "Invalid OpenAI API key format" Error
-- API key should start with `sk-`
-- Ensure no quotes around the key in `.env`
-- No spaces before or after the `=` sign
-
 ### Database Issues
 - Delete `survey_data.db` to reset
 - Database auto-creates on first run
 - Check write permissions in project directory
 
 ### Slow Response Times
-- GPT-4 API typically takes 2-3 seconds
-- Check internet connection
 - Consider using gpt-3.5-turbo for faster responses (less accurate)
 
-## Development Notes
-
-- **API Key Security:** Never commit `.env` file to version control
+## Notes
 - **Database:** SQLite used for development; easily upgradable to PostgreSQL for production
 - **Scalability:** Current architecture supports migration to cloud services (AWS, GCP, Azure)
 - **Testing:** Complete a test survey to verify all features work correctly
@@ -245,15 +231,3 @@ Potential improvements for production deployment:
 - Export to CSV/Excel
 - Multi-language support
 - Integration with CRM systems
-
-## Support
-
-For issues or questions, please check:
-1. This README's troubleshooting section
-2. Ensure all dependencies are installed
-3. Verify API key is configured correctly
-4. Check terminal output for error messages
-
----
-
-**Built with ❤️ using OpenAI GPT-4, Streamlit, and Python**
