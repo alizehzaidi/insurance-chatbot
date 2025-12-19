@@ -1,0 +1,9 @@
+.env
+*.env
+__pycache__/
+*.pyc
+.vscode/
+venv/
+survey_data.db
+*.db
+.DS_Store
